@@ -1,30 +1,40 @@
 package online.store.warehouse;
 
 public class Item implements Comparable{
+
+    private boolean noDiscount;
     private String id;
     private String name;
     private double retail;
     private int quantity;
     private double price;
 
-    Item(String id, String name, String retail, String quantity)
+    Item(String id, String name, String retail, String quantity, String noDiscount)
     {
         this.id = id;
         this.name = name;
         this.retail = Double.parseDouble(retail);
         this.quantity = Integer.parseInt(quantity);
+        this.noDiscount = Boolean.parseBoolean(noDiscount);
 
-        if(this.quantity > 400)
+        if(!this.noDiscount)
         {
-            price = this.retail* .5D;
-        }
-        else if (this.quantity > 200)
-        {
-            price = this.retail * .6D;
+            if(this.quantity > 400)
+            {
+                price = this.retail* .5D;
+            }
+            else if (this.quantity > 200)
+            {
+                price = this.retail * .6D;
+            }
+            else
+            {
+                price = this.retail * .7D;
+            }
         }
         else
         {
-            price = this.retail * .7D;
+            price = this.retail;
         }
 
         price = Math.floor(price * 100 + .5) / 100;

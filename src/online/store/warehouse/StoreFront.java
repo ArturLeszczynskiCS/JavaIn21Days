@@ -6,9 +6,9 @@ public class StoreFront {
 
     private LinkedList catalog = new LinkedList();
 
-    public void addItem(String id, String name, String price, String quantity)
+    public void addItem(String id, String name, String price, String quantity, String noDiscount)
     {
-        Item it = new Item(id, name, price, quantity);
+        Item it = new Item(id, name, price, quantity,noDiscount);
         catalog.add(it);
     }
 

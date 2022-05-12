@@ -4,10 +4,10 @@ public class GiftShop {
     public static void main(String[] arguments)
     {
         StoreFront store = new StoreFront();
-        store.addItem("CO1", "klawiatura","500","100");
-        store.addItem("CO2", "myszka","300","500");
-        store.addItem("CO3", "podkładka","50","700");
-        store.addItem("CO4", "monitor","2500","50");
+        store.addItem("CO1", "klawiatura","500","100","true");
+        store.addItem("CO2", "myszka","300","500","false");
+        store.addItem("CO3", "podkładka","50","700", "false");
+        store.addItem("CO4", "monitor","2500","50", "true");
 
         store.sort();
 
