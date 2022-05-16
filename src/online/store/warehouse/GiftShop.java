@@ -1,6 +1,7 @@
 package online.store.warehouse;
 
 public class GiftShop {
+
     public static void main(String[] arguments)
     {
         StoreFront store = new StoreFront();
